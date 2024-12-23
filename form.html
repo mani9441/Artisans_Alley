@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body>
+    <h1>Add New Product</h1>
+    <form id="productForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price" required><br>
+        <label for="description">Description:</label><br>
+        <input type="text" id="description" name="description" required><br>
+        <label for="image">Image Path:</label><br>
+        <input type="text" id="image" name="image" required><br><br>
+        <button type="button" onclick="addProduct()">Add Product</button>
+    </form>
+
+    <script>
+        function addProduct() {
+            const name = document.getElementById('name').value;
+            const price = document.getElementById('price').value;
+            const description = document.getElementById('description').value;
+            const image = document.getElementById('image').value;
+
+            const newProduct = {
+                name: name,
+                price: parseFloat(price),
+                description: description,
+                image: image
+            };
+
+            let products = JSON.parse(localStorage.getItem('products')) || [];
+            products.push(newProduct);
+            localStorage.setItem('products', JSON.stringify(products));
+
+            alert('Product added successfully!');
+            document.getElementById('productForm').reset();
+        }
+    </script>
+</body>
+</html>

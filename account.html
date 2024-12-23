@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisans Ally - User Account</title>
+    <link rel="stylesheet" href="css\main.css">
+</head>
+<body>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+
+    header {
+        background: #333;
+        color: white;
+        padding: 15px 0;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .search-profile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .search-profile input[type="text"] {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .profile-icon {
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    h1, h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .account-overview, .personal-info, .account-settings, .my-listings, .orders-transactions, .artisan-dashboard, .support {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .account-settings ul, .my-listings ul, .orders-transactions ul, .artisan-dashboard ul, .support ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .account-settings ul li a, .my-listings ul li a, .orders-transactions ul li a, .artisan-dashboard ul li a, .support ul li a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .account-settings ul li a:hover, .my-listings ul li a:hover, .orders-transactions ul li a:hover, .artisan-dashboard ul li a:hover, .support ul li a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        background: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+    </style>
+
+    <header>
+        <div class="container">
+            <img src="img\artisanslogo.jpg" alt="Artisans Ally Logo" class="logo" >
+            
+            <h1 class="logo"><a href="index.html">Artisan's Alley</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Explore</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="search-profile">
+                <input type="text" placeholder="Search...">
+                <img src="img\favicon.png" alt="Profile Icon" class="profile-icon">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section style="color: black;" class="account-overview">
+                <div class="profile-pic">
+                    <img src="img\favicon.png" alt="Profile Picture">
+                    <button style="background-color: black;">Upload/Edit</button>
+                </div>
+                <h1  style="color: black;">YourUser name</h1>
+                <p>Email: your.email@example.com</p>
+                <p>Role: Artisan</p>
+            </section>
+
+            <section style="color: black;" class="personal-info">
+                <p>  </p>
+                <h2 style="color: black;">Personal Information</h2>
+                <p>Full Name: First Last</p>
+                <p>Contact Number: 123-456-7890</p>
+                <p>Location: City, Country</p>
+                <p>Bio: Short bio about yourself or your business</p>
+                <p>Social Media Links: [Twitter] [Instagram] [LinkedIn] [Others]</p>
+            </section>
+
+            <section style="color: black;" class="account-settings">
+                <p></p>
+                <h2 style="color: black;" >Account Settings</h2>
+                <ul>
+                    <li><a href="#">Change Password</a></li>
+                    <li><a href="#">Email Preferences</a></li>
+                    <li><a href="#">Privacy Settings</a></li>
+                    <li><a href="#">Connected Accounts</a></li>
+                </ul>
+            </section>
+
+            <section style="color: black;" class="my-listings">
+                <p></p>
+                <h2 style="color: black;" >My Listings</h2>
+                <ul>
+                    <li><a href="#">Active Listings</a></li>
+                    <li><a href="#">Drafts</a></li>
+                    <li><a href="#">Archived</a></li>
+                </ul>
+            </section>
+
+            <section style="color: black;" class="orders-transactions">
+                <p></p>
+                <h2 style="color: black;">Orders & Transactions</h2>
+                <ul>
+                    <li><a href="#">Order History</a></li>
+                    <li><a href="#">Manage Payments</a></li>
+                </ul>
+            </section>
+
+            <section style="color: black;" class="artisan-dashboard">
+                <p></p>
+                <h2 style="color: black;">Artisan Dashboard</h2>
+                <ul>
+                    <li><a href="#">Profile Statistics</a></li>
+                    <li><a href="#">Performance Metrics</a></li>
+                    <li><a href="#">Manage Inventory</a></li>
+                </ul>
+            </section>
+
+            <section style="color: black;" class="support">
+                <p></p>
+                <h2 style="color: black;">Support</h2>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Contact Us</a></p>
+        </div>
+    </footer>
+</body>
+</html>

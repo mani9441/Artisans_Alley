@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="shortcut icon" href="img/artisanslogo.jpg">
+  <title>Artisan's Alley - Merchant Dashboard</title>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assetscss/style.css" rel="stylesheet">
+
+  <style>
+    #sidebar {
+      position: fixed;
+      top: 80px; /* Adjust according to the header height */
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background: #f8f9fa;
+      padding-top: 20px;
+      border-right: 1px solid #dee2e6;
+    }
+    #main-content {
+      margin-left: 220px; /* Adjust according to the sidebar width */
+    }
+    .sidebar-label {
+      display: block;
+      padding: 10px 15px;
+      color: #333;
+      text-decoration: none;
+    }
+    .sidebar-label:hover {
+      background: #e9ecef;
+      text-decoration: none;
+    }
+  </style>
+
+</head>
+<body>
+
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo"><img src="img/artisanslogo.jpg" alt="" class="img-fluid"></a>
+    <h1 class="logo"><a href="index.html">Artisan's Alley</a></h1>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="nav-link scrollto" href="stories.html">Stories</a></li>
+        <li><a class="nav-link scrollto" href="../index.html#contact">Contact</a></li>
+        <li class="dropdown"><a href="#"><img src="user.svg"> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="register.html">Sign-Up</a></li>
+            <li><a href="login.html">Sign-in</a></li>
+            <li><a href="account.html">User Account</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="cart.html"><img src="cart.svg"></a></li>
+        <li><a class="toggle-sidebar-btn nav-link">☰</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+  </div>
+</header>
+
+<div id="sidebar">
+  <a href="#form" class="sidebar-label">Add new product</a>
+  <a href="#list" class="sidebar-label">Your products</a>
+  <a href="#profile" class="sidebar-label">profile</a>
+</div>
+
+<main id="main-content" style="padding-top: 80px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="mt-5">Merchant Dashboard</h2>
+
+        <!-- Dashboard Section -->
+        <section  id="dashboard" class="card">
+            
+            <p>Welcome to your dashboard! Here you can view your sales, manage products, and update your profile.</p>
+        </section>
+
+        <!-- Add Product Form -->
+        <section id = form>
+            <div class="card mt-4">
+            <div class="card-header">
+                <h3>Add New Product</h3>
+            </div>
+            <div class="card-body">
+                <form id="add-product-form">
+                <div class="mb-3">
+                    <label for="productName" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="productName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="productPrice" class="form-label">Product Price</label>
+                    <input type="number" class="form-control" id="productPrice" required>
+                </div>
+                <div class="mb-3">
+                    <label for="productDescription" class="form-label">Product Description</label>
+                    <textarea class="form-control" id="productDescription" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="productImage" class="form-label">Product Image</label>
+                    <input type="file" class="form-control" id="productImage" required>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="addProduct()">Add Product</button>
+                </form>
+            </div>
+            </div>
+        </section>
+
+        <!-- Product List -->
+        <section id = list>
+            <div class="card mt-4">
+            <div class="card-header">
+                <h3>Your Products</h3>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                <thead>
+                    <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list">
+                    <!-- Dynamic product rows go here -->
+                </tbody>
+                </table>
+            </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="card mt-4">
+            <div class="card-header">
+            <h3>Profile</h3>
+            </div>
+            <div class="card-body">
+            <form id="profile-form">
+                <div class="mb-3">
+                <label for="profile-name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="profile-name" name="profile-name" required>
+                </div>
+                <div class="mb-3">
+                <label for="profile-email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="profile-email" name="profile-email" required>
+                </div>
+                <div class="mb-3">
+                <label for="profile-password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="profile-password" name="profile-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Profile</button>
+            </form>
+            </div>
+        </section>
+  
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer id="footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Artisan's Alley</span></strong>. All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    document.getElementById('add-product-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      addProduct();
+      addProductToList();
+    });
+    
+    function addProduct() {
+      // Get form data
+      let productName = document.getElementById('productName').value;
+      let productPrice = document.getElementById('productPrice').value;
+      let productDescription = document.getElementById('productDescription').value;
+      let productImage = document.getElementById('productImage').files[0];
+    
+      // Create a new product object
+      let newProduct = {
+        name: productName,
+        price: productPrice,
+        description: productDescription,
+        image: URL.createObjectURL(productImage)
+      };
+    
+      // Save product to local storage
+      let products = JSON.parse(localStorage.getItem('products')) || [];
+      products.push(newProduct);
+      localStorage.setItem('products', JSON.stringify(products));
+    
+      alert('Product added successfully!');
+      document.getElementById('add-product-form').reset();
+    }
+    
+    function addProductToList() {
+      // Get form data
+      let productName = document.getElementById('productName').value;
+      let productPrice = document.getElementById('productPrice').value;
+      let productDescription = document.getElementById('productDescription').value;
+      let productImage = document.getElementById('productImage').files[0];
+    
+      // Create a new product object
+      let newProduct = {
+        name: productName,
+        price: productPrice,
+        description: productDescription,
+        image: URL.createObjectURL(productImage)
+      };
+    
+      // Add the product to the product list (you can also send it to a server here)
+      let productList = document.getElementById('product-list');
+      let row = productList.insertRow();
+      row.insertCell(0).innerText = newProduct.name;
+      row.insertCell(1).innerText = newProduct.price;
+      row.insertCell(2).innerText = newProduct.description;
+      let imgCell = row.insertCell(3);
+      let img = document.createElement('img');
+      img.src = newProduct.image;
+      img.style.width = '50px';
+      img.style.height = '50px';
+      imgCell.appendChild(img);
+      row.insertCell(4).innerHTML = '<button class="btn btn-danger btn-sm">Delete</button>';
+    }
+    
+    // Load products from local storage and display them on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      let products = JSON.parse(localStorage.getItem('products')) || [];
+      products.forEach(function(product) {
+        let productList = document.getElementById('product-list');
+        let row = productList.insertRow();
+        row.insertCell(0).innerText = product.name;
+        row.insertCell(1).innerText = product.price;
+        row.insertCell(2).innerText = product.description;
+        let imgCell = row.insertCell(3);
+        let img = document.createElement('img');
+        img.src = product.image;
+        img.style.width = '50px';
+        img.style.height = '50px';
+        imgCell.appendChild(img);
+        row.insertCell(4).innerHTML = '<button class="btn btn-danger btn-sm">Delete</button>';
+      });
+    });
+    </script>
+
+    
+</body>
+</html>
+

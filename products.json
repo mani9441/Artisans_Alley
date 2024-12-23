@@ -1,0 +1,21 @@
+[
+    {
+      "name": "Handmade Vase",
+      "price": 25,
+      "description": "Beautiful handmade vase made from clay.",
+      "image": "img/products/vase.jpg"
+    },
+    {
+        "name": "Handmade Vase",
+        "price": 25,
+        "description": "Beautiful handmade vase made from clay.",
+        "image": "img/products/vase.jpg"
+      },
+    {
+      "name": "Wooden Sculpture",
+      "price": 45,
+      "description": "Intricate wooden sculpture carved by hand.",
+      "image": "img/products/sculpture.jpg"
+    }
+  ]
+  
